@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  box-sizing: border-box; }
+
+/*header*/
+/*Menu*/
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #FFF;
+  position: fixed;
+  width: 100%;
+  height: 80px; }
+  header nav .Logo {
+    height: 60px;
+    margin-left: 20px; }
+  header nav ul {
+    display: flex; }
+    header nav ul li {
+      list-style-type: none;
+      padding: 40px;
+      font-family: Segoe UI;
+      font-weight: bold;
+      font-style: italic; }
+      header nav ul li:hover {
+        color: #D5AC63;
+        cursor: pointer; }
+  header nav .deconnecter {
+    margin: 40px; }
+header .Titre {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/question/1.png);
+  height: 550px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 130px;
+  padding-left: 50px; }
+  header .Titre div h1 {
+    font-family: Agency Fb;
+    font-size: 72px;
+    font-weight: bold;
+    color: #FFFFFF; }
+    header .Titre div h1 span {
+      color: #D5AC63; }
+  header .Titre button {
+    font-family: Segoe UI;
+    background-color: #D5AC63;
+    font-style: italic;
+    border: none;
+    padding: 10px;
+    border-radius: 100px;
+    width: 141px;
+    font-size: 20px;
+    outline: none; }
+    header .Titre button:hover {
+      cursor: pointer; }
+
+.active {
+  color: #D5AC63; }
+
+/*question*/
+.Question h2 {
+  text-align: center;
+  font-family: Segoe UI;
+  font-weight: bold;
+  font-style: italic; }
+.Question .border2 {
+  width: 160px;
+  height: 2px;
+  background-color: #D5AC63;
+  margin: 20px auto; }
+.Question .container .frm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px; }
+  .Question .container .frm label {
+    font-family: Segoe UI;
+    font-weight: bold;
+    font-style: italic; }
+  .Question .container .frm button {
+    font-family: Segoe UI;
+    background-color: #D5AC63;
+    font-style: italic;
+    border: none;
+    padding: 10px;
+    border-radius: 100px;
+    width: 141px;
+    font-size: 20px;
+    outline: none;
+    display: block;
+    margin: 0 auto; }
+    .Question .container .frm button:hover {
+      cursor: pointer; }
+
+.Contact {
+  margin-top: 100px; }
+  .Contact h2 {
+    text-align: center;
+    font-family: Segoe UI;
+    font-weight: bold;
+    font-style: italic; }
+  .Contact .border2 {
+    width: 160px;
+    height: 2px;
+    background-color: #D5AC63;
+    margin: 20px auto; }
+  .Contact .map {
+    width: 60%;
+    display: block;
+    margin: auto; }
+
+/*footer*/
+footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  margin-top: 200px; }
+  footer .ftr ul {
+    color: #D5AC63;
+    font-family: Segoe UI;
+    align-items: center;
+    justify-content: center; }
+    footer .ftr ul li {
+      list-style-type: none;
+      padding: 7px;
+      text-align: center; }
+    footer .ftr ul i {
+      color: #909090;
+      font-size: 2em; }
+
+/*media query*/
+@media screen and (max-width: 830px) {
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #FFF;
+    position: fixed;
+    width: 100%;
+    height: 80px; }
+    header nav .Logo {
+      height: 60px;
+      margin-left: 20px; }
+    header nav ul {
+      display: none; }
+      header nav ul li {
+        list-style-type: none;
+        padding: 40px;
+        font-family: Segoe UI;
+        font-weight: bold;
+        font-style: italic; }
+        header nav ul li:hover {
+          color: #D5AC63;
+          cursor: pointer; } }
+
+/*# sourceMappingURL=style.css.map */
