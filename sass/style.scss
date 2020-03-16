@@ -1,3 +1,4 @@
+@import "Reclamation.scss";
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +9,26 @@ body{
 /*header*/
 /*Menu*/
 header{
+    #check{
+        display: none;
+    }
+    .checkbtn{
+    position: relative;
+    left: -210px;
+    font-size: 30px;
+    color:white;
+    cursor: pointer;
+    display: none;
+    top:120px;
+    }
+    .Menu-link2{
+        top: 97px;
+        position: absolute;
+        left:-70px;
+        z-index: 1;
+        display: none;}
     nav{
+        z-index: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -24,6 +44,15 @@ header{
         ul{
             display: flex;
             li{
+                a{
+                    text-decoration: none;
+                    color: #FFF;
+                    &:hover{
+                        text-decoration: none;
+                        color: #D5AC63;
+                        cursor: pointer;
+                    }
+                }
                 list-style-type: none;
                 padding: 40px;
                 font-family: Segoe UI;
@@ -144,6 +173,8 @@ header{
         margin: auto;
     }
 }
+/*about*/
+@import "about.scss";
 /*footer*/
 footer{
     background-color: #000000;
@@ -169,11 +200,44 @@ footer{
     }
 }
 /*media query*/
-@media screen and (max-width:830px){
-
-   
+@media screen and (max-width:830px){   
     header{
+        .checkbtn{
+            position: relative;
+            left: 10px;
+            font-size: 30px;
+            color:#D5AC63;
+            cursor: pointer;
+            display: block;
+            top: 0px;
+            z-index: 2;
+        }
+        #check:checked ~ .Menu-link2{
+            display: block;
+        }
+        .Menu-link2{
+            top: 80px;
+            position: absolute;
+            left:-70px;
+            z-index: 1;
+            a{
+                display: block;
+                background-color: black;
+                width:100% + 200%;
+                height: 60px;
+                text-align: center;
+                color: #FFF;
+                text-decoration: none;
+                &:hover{
+                    color: #D5AC63;
+                    cursor: pointer;
+                }
+                
+        
+            }
+        }
         nav{
+           
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -207,4 +271,43 @@ footer{
 
 }
     }
+    .Titre{
+        background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../img/question/1.png);
+        height: 550px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 173px !important;
+        padding-left: 50px;
+        // text-align: center;
+        margin: auto;
+        div{
+            h1{
+                font-family: Agency Fb;
+                font-size: 50px !important;
+                font-weight: bold;
+                color: #FFFFFF;
+               
+                span{
+                    color: #D5AC63;
+                }
+            }
+        }
+        button{
+            font-family: Segoe UI;
+              background-color:#D5AC63;
+                font-style: italic;
+                border: none;
+                padding: 10px;
+                border-radius: 100px;
+                width: 141px;
+                font-size: 20px;
+                outline: none;
+                &:hover{
+                    cursor: pointer;
+                }
+        }
+    }
+    
+ 
 }
