@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link href="css/style.css" rel="stylesheet">
     <title>Document</title>
@@ -22,15 +23,14 @@
                     <a>Home</a>
                     <a href="Reclamation.html">Réclamation</a>
                     <a class="contact">Contact</a>
-                    <a class="active" >Questionnaire</a>
-                
+                    <a class="active question" >Questionnaire</a>
             </div>
             <div class="Logo"> <img src="img/question/img.png" class="Logo"></div>
             <ul>
                 <li><a>Home</a></li>
-                <li ><a href="Reclamation.html">Réclamation</a></li>
-                <li class="contact"><a>Contact</a></li>
-                <li class="active" ><a>Questionnaire</a></li>
+                <li><a href="Reclamation.html">Réclamation</a></li>
+                <li class="contact" id="contact"><a>Contact</a></li>
+                <li class="active question" id="Questionnaire" ><a>Questionnaire</a></li>
             </ul>
             <div>
                 <img src="img/question/Icon open-account-login.png" class="deconnecter">
@@ -48,10 +48,10 @@
         <h2>Question</h2>
         <div class="border2"></div>
        <div class="container">
-        <form class="frm">
+        <form class="frm" method="GET" action="questionnement.html">
             <div class="form-group">
                 <label for="formGroupExampleInput">Service</label>
-               <select class="form-control">
+               <select class="form-control" name="service">
                 <option>Appels d'offre</option>
                 <option>Recrutement</option>
                 <option>Médiathéque</option>
@@ -60,15 +60,15 @@
               </div>
             <div class="form-group">
               <label >Example label</label>
-              <input type="Date" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+              <input type="Date" class="form-control" name="Date" id="formGroupExampleInput" placeholder="Example input">
             </div>
             <div class="form-group">
               <label for="formGroupExampleInput2">Nom Client</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nom client">
+              <input type="text" name="nomclient" class="form-control" id="formGroupExampleInput2" placeholder="Nom client">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Description</label>
-               <textarea class="form-control" ></textarea>
+               <textarea class="form-control" name="Description" ></textarea>
               </div>
             <button>Envoiyer</button>
           </form>
@@ -88,6 +88,18 @@
         </div>
 
     </section>
+    <div class="bg-modal-2">
+        <div class="modal-content2">
+            <div class="close">+</div>
+            <h1 id="titre">Service</h1>
+            <img src="" class="taille" alt="logo">
+            <div class="form">
+            <div class="info"><span id="Nom"></span></div>
+            <div class="info"><span id="Description"></span></div>
+            
+            </div>
+        </div>
+    </div>
     <footer >
         <div class="container ftr">
          
@@ -110,5 +122,7 @@
         </div>
 
     </footer>
+  
+    <script src="Traitement/file.js"></script>
 </body>
 </html>
