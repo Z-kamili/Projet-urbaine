@@ -48,18 +48,15 @@
         <h2>Question</h2>
         <div class="border2"></div>
        <div class="container">
-        <form class="frm" method="GET" action="questionnement.html">
+        <form class="frm" method="POST" action="questionnement.html">
             <div class="form-group">
                 <label for="formGroupExampleInput">Service</label>
-               <select class="form-control" name="service">
-                <option>Appels d'offre</option>
-                <option>Recrutement</option>
-                <option>Médiathéque</option>
-                <option>Enquéte de Satisfaction</option>
+               <select class="form-control" id="select" name="service">
+               
                </select>
               </div>
             <div class="form-group">
-              <label >Example label</label>
+              <label >Date de question</label>
               <input type="Date" class="form-control" name="Date" id="formGroupExampleInput" placeholder="Example input">
             </div>
             <div class="form-group">
