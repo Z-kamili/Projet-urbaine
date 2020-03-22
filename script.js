@@ -4,10 +4,11 @@ fs = require('fs'),
 app = express(),
 bodyParser = require('body-parser'),
 client = "",
-Dataquestion = fs.readFileSync('Traitement/JSON/Question.json'),
-Question = JSON.parse(Dataquestion);
+path = 'Traitement/JSON/Question.json';
+LoadData = require('./Readandwrite');
 http = require("http").Server(app).listen(8000);
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
+/*Lancer server */
 app.use("/css",express.static("./css"))
 app.use("/Traitement",express.static("./Traitement"))
 app.use("/img",express.static("./img"))
@@ -18,23 +19,29 @@ app.get("/Reclamation.html",function(req,res){
 
     res.sendFile(__dirname+"/Reclamation.html");
 });
+app.get("/home.html",function(req,res){
+
+    res.sendFile(__dirname+"/home.html");
+});
+/*Use Post data*/
 app.post("/questionnement.html",urlencodedParser,function(req,res){  
     SaveData(req.body.CIN,req.body.Date,req.body.Description,req.body.service);
 
 res.sendFile(__dirname+"/questionnement.html");
 });
 
-
+/*Save Data in json file */
 
 function SaveData(cin,date_question,description,id_service){
 
     var id;
+    Question = LoadData.LoadJson(path);
     if(Question[Question.length - 1].ID != null){
-      id  = Question[Question.length].ID + 1;
+      id  = Question[Question.length - 1].ID + 1;
     }else{
         id = 1;
     }
-    let data = 
+    var data = 
         { 
             ID: id,
             CIN: cin, 
@@ -44,9 +51,9 @@ function SaveData(cin,date_question,description,id_service){
         };
         Question.push(data);
 
-    let question = JSON.stringify(Question);
-
-    fs.writeFileSync('Traitement/JSON/Question.json',question);
+    var question = JSON.stringify(Question);
+    LoadData.SaveJson(path,question);
+    
 }
 
 

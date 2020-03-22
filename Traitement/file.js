@@ -99,11 +99,13 @@ $(".close").click(()=>{
 //validation forme 
 
 
+ 
+
 $("#btn").click((e)=>{
     e.preventDefault();
     E_rror.classList.add("alert");
     E_rror.classList.add("alert-danger");
-if($("#nomclient").val() == "" || $("#nomclient").val() == "" || $("#Date").val() == "" || $("#Description").val() == ""){
+if($("#CIN").val() === "" || $("#select").val() === "Choisir" || $("#Date").val() === "" || $("#Description").val() === ""){
 $(".container>.alert").remove();
 E_rror.innerText = "vous devez remplir tous les champs possible";
 $(".container").append(E_rror);
