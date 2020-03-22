@@ -5,7 +5,7 @@ Error: Undefined variable: "$color".
 19:     padding: 2px;
 20:     position: relative;
 21:     margin: auto;
-22:     margin-top: 1066px;
+22:     margin-top: 600px;
 23:     .btn-two{
 24:         background-color: $color;
 25:         color: $white;
@@ -80,4 +80,4 @@ C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color\".\A         on line 24 of sass/information.scss\A \A 19:     padding: 2px;\A 20:     position: relative;\A 21:     margin: auto;\A 22:     margin-top: 1066px;\A 23:     .btn-two{\A 24:         background-color: $color;\A 25:         color: $white;\A 26:         border: $color;\A 27:         padding: 10px;\A 28:     }\A 29:     .close{"; }
+  content: "Error: Undefined variable: \"$color\".\A         on line 24 of sass/information.scss\A \A 19:     padding: 2px;\A 20:     position: relative;\A 21:     margin: auto;\A 22:     margin-top: 600px;\A 23:     .btn-two{\A 24:         background-color: $color;\A 25:         color: $white;\A 26:         border: $color;\A 27:         padding: 10px;\A 28:     }\A 29:     .close{"; }

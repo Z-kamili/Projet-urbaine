@@ -12,14 +12,14 @@
 }
 .modal-content2{
     width: 500px;
-    height: 562px;
+    height: 248px;
     background-color: white;
     border-radius: 4px;
     text-align: center;
     padding: 2px;
     position: relative;
     margin: auto;
-    margin-top: 1066px;
+    margin-top: 600px;
     .btn-two{
         background-color: $color;
         color: $white;
@@ -85,17 +85,17 @@
         display: none;
         
     }
-    .modal-content2{
-        width: 441px;
-        height: 562px;
-        background-color: white;
-        border-radius: 4px;
-        text-align: center;
-        padding: 20px;
-        position: relative;
-        margin: auto;
-        margin-top: 1830px;
-    }
+    // .modal-content2{
+    //     width: 441px;
+    //     height: 562px;
+    //     background-color: white;
+    //     border-radius: 4px;
+    //     text-align: center;
+    //     padding: 20px;
+    //     position: relative;
+    //     margin: auto;
+    //     margin-top: 1830px;
+    // }
 
 
 }

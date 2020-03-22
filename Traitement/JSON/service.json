@@ -3,8 +3,6 @@
         "ID" : 1,
         "Nom_service" : "Appels d'offres",
         "Description" : "Cet espace contient le programme prévisionnel, La liste des avis des appels d'offre lancés ainsi que les résultats de ceux deja lancés"
-
-
     },
     {
         "ID" : 2,

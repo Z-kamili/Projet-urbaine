@@ -66,14 +66,14 @@ table thead tr {
 
 .modal-content2 {
   width: 500px;
-  height: 562px;
+  height: 248px;
   background-color: white;
   border-radius: 4px;
   text-align: center;
   padding: 2px;
   position: relative;
   margin: auto;
-  margin-top: 1066px; }
+  margin-top: 600px; }
   .modal-content2 .btn-two {
     background-color: #05AAEA;
     color: white;
@@ -124,18 +124,7 @@ table thead tr {
     justify-content: center;
     align-items: center;
     z-index: 2;
-    display: none; }
-
-  .modal-content2 {
-    width: 441px;
-    height: 562px;
-    background-color: white;
-    border-radius: 4px;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    margin: auto;
-    margin-top: 1830px; } }
+    display: none; } }
 * {
   margin: 0;
   padding: 0; }

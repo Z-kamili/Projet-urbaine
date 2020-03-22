@@ -49,28 +49,30 @@
         <div class="border2"></div>
        <div class="container">
         <form class="frm" method="POST" action="questionnement.html">
-            <div class="form-group">
+            
                 <label for="formGroupExampleInput">Service</label>
-               <select class="form-control" id="select" name="service">
+               <select class="form-control" onchange="getSelectValue()" id="select" name="service">
                
                </select>
-              </div>
+             
             <div class="form-group">
               <label >Date de question</label>
-              <input type="Date" class="form-control" name="Date" id="formGroupExampleInput" placeholder="Example input">
+              <input type="Date" class="form-control" name="Date" id="Date" placeholder="Example input">
             </div>
+          
             <div class="form-group">
-              <label for="formGroupExampleInput2">Nom Client</label>
-              <input type="text" name="nomclient" class="form-control" id="formGroupExampleInput2" placeholder="Nom client">
-            </div>
+                <label for="formGroupExampleInput2">CIN</label>
+                <input type="text" name="CIN" class="form-control" id="Prenomclient" placeholder="Nom client">
+              </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Description</label>
-               <textarea class="form-control" name="Description" ></textarea>
+               <textarea class="form-control" name="Description" id="Description" ></textarea>
               </div>
-            <button>Envoiyer</button>
+            <button id="btn" type="submit" value="Envoiyer">Envoyer</button>
           </form>
          
        </div>
+    </div>
                
          
             
@@ -89,10 +91,9 @@
         <div class="modal-content2">
             <div class="close">+</div>
             <h1 id="titre">Service</h1>
-            <img src="" class="taille" alt="logo">
             <div class="form">
             <div class="info"><span id="Nom"></span></div>
-            <div class="info"><span id="Description"></span></div>
+            <div class="info"><span id="Descriptions" style="color: black;"></span></div>
             
             </div>
         </div>
