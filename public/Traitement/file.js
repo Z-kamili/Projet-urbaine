@@ -1,0 +1,122 @@
+//variable
+var select = document.getElementById("select");
+var url = "http://localhost:3000/public/Traitement/JSON/service.json";
+var url2 = "http://localhost:3000/public/Traitement/JSON/Client.json";
+var request = new XMLHttpRequest();
+var data_service = "";
+var E_rror = document.createElement("div");
+var client;
+//Traitement animation
+$(".error").css("display","block !important");
+$('.contact').click(()=>{
+$('.contact').addClass("active");
+$('.question').removeClass("active");
+    $('html').animate({
+        scrollTop: $(".Contact").offset().top
+       
+        
+    },'slow');
+
+
+});
+$(".question").click(()=>{
+$('.contact').removeClass("active");
+$('.question').addClass("active");
+    $('html').animate({
+        scrollTop: $(".Question").offset().top
+        
+    },'slow');
+});
+
+//Load data to object javascript using AJAX
+window.onload = function() {
+  this.LoadDataService();
+}
+
+//function
+function LoadDataService(){
+    request.open("GET", url);
+    request.onload = function() {
+        if (request.status == 200) {
+            data_service = JSON.parse(request.responseText);
+            RemplirSelect(data_service);
+
+        }
+    };
+    request.send(null);
+}
+//remplir select box using javascript 
+var gnrl;
+function RemplirSelect(data){
+    gnrl = data;
+    console.log(gnrl);
+    for(var  i = 0;i<data.length;i++){
+        var option = document.createElement("option");
+        option.innerText = data[i].Nom_service;
+        select.appendChild(option);
+    }
+}
+
+function getSelectValue(){
+selectedValue = document.getElementById("select").value;
+for(var i = 0;i<gnrl.length;i++){
+if(gnrl[i].Nom_service == selectedValue  ){
+$("#Nom").text(gnrl[i].Nom_service);
+console.log(gnrl[i].Description);
+$("#Descriptions").text(gnrl[i].Description);
+$(".bg-modal-2").css("display","block");
+$("body").css("overflowY","hidden");
+}
+}
+}
+$(".close").click(()=>{
+    $("body").css("overflowY","visible");
+    $(".bg-modal-2").css("display","none");
+})
+
+//Load data client
+// function LoadDataclient(){
+//     request.open("GET", url2);
+//     request.onload = function() {
+//         if (request.status == 200) {
+//             client = JSON.parse(request.responseText);
+//               validatename(client);
+//         }
+//     };
+// }
+
+// function validatename(data){
+   
+//     // if(bol){
+//     //     return true;
+//     // }else{
+//     //     return false;
+//     // }
+//     console.log(data);
+   
+// }
+
+//validation forme 
+$("#btn").click((e)=>{
+    e.preventDefault();
+    E_rror.classList.add("alert");
+    E_rror.classList.add("alert-danger");
+if($("#CIN").val() === "" || $("#select").val() === "Choisir" || $("#Date").val() === "" || $("#Description").val() === ""){
+$(".container>.alert").remove();
+E_rror.innerText = "vous devez remplir tous les champs possible";
+$(".container").append(E_rror);
+}else{
+    $(".container>.alert").remove();
+        $( ".frm" ).submit();
+}
+});
+
+
+
+
+
+
+
+
+
+

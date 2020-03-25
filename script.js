@@ -1,41 +1,52 @@
-/*server local*/
-var express = require("express"),
-fs = require('fs'),
-app = express(),
-bodyParser = require('body-parser'),
+const path = require('path');
+const Joi = require('joi');
+const express = require("express");
+const hbs = require('hbs');
+const app = express();
+const partialsPath = path.join(__dirname, './partials');
+var bodyParser = require('body-parser'),
 client = "",
-path = 'Traitement/JSON/Question.json';
-LoadData = require('./Readandwrite');
-http = require("http").Server(app).listen(8000);
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
-/*Lancer server */
-app.use("/css",express.static("./css"))
-app.use("/Traitement",express.static("./Traitement"))
-app.use("/img",express.static("./img"))
-app.get("/questionnement.html",function(req,res){ 
-    res.sendFile(__dirname+"/questionnement.html");
-})
-app.get("/Reclamation.html",function(req,res){
-
-    res.sendFile(__dirname+"/Reclamation.html");
+path_jsonfile = 'public/Traitement/JSON/Question.json',
+LoadData = require('./Modale/Readandwrite'),
+urlencodedParser = bodyParser.urlencoded({ extended: false });
+// *Define paths for express config
+const viewPath = path.join(__dirname, './views');
+// *setup handlebars engine and views location
+app.set('view engine', 'hbs');
+// app.set('view engine', 'html');
+// app.engine('html', require('hbs').__express);
+// app.set('view engine', 'hbs');
+// Pointing express to my custom directory
+app.set('views', viewPath)
+hbs.registerPartials(partialsPath)
+// registerPartials take the path to the direcotory where my partials leaves
+app.use("/public/css",express.static("./public/css"))
+app.use("/public/Traitement",express.static("./public/Traitement"))
+app.use("/public/img",express.static("./public/img"))
+// Lancement des pages
+app.get("/questionnement.hbs", (req, res) => {
+  res.render('questionnement');
 });
-app.get("/home.html",function(req,res){
-
-    res.sendFile(__dirname+"/home.html");
-});
-/*Use Post data*/
-app.post("/questionnement.html",urlencodedParser,function(req,res){  
+app.get("/Reclamation.hbs", (req, res) => {
+    res.render('Reclamation');
+  });
+app.get("/home.hbs", (req, res) => {
+    res.render('home');
+  });
+// Port
+var port = process.env.PORT || 3000;
+app.listen(port,() => console.log(`Listening on port ${port}...`));
+/*server local*/
+// /*Use Post data*/
+app.post("/questionnement.hbs",urlencodedParser,function(req,res){  
     SaveData(req.body.CIN,req.body.Date,req.body.Description,req.body.service);
-
-res.sendFile(__dirname+"/questionnement.html");
+    res.render('questionnement');
 });
-
-/*Save Data in json file */
-
+// /*Save Data in json file */
 function SaveData(cin,date_question,description,id_service){
 
     var id;
-    Question = LoadData.LoadJson(path);
+    Question = LoadData.LoadJson(path_jsonfile);
     if(Question[Question.length - 1].ID != null){
       id  = Question[Question.length - 1].ID + 1;
     }else{
@@ -52,7 +63,7 @@ function SaveData(cin,date_question,description,id_service){
         Question.push(data);
 
     var question = JSON.stringify(Question);
-    LoadData.SaveJson(path,question);
+    LoadData.SaveJson(path_jsonfile,question);
     
 }
 
