@@ -57,45 +57,10 @@ function RemplirSelect(data){
     }
 }
 
-function getSelectValue(){
-selectedValue = document.getElementById("select").value;
-for(var i = 0;i<gnrl.length;i++){
-if(gnrl[i].Nom_service == selectedValue  ){
-$("#Nom").text(gnrl[i].Nom_service);
-console.log(gnrl[i].Description);
-$("#Descriptions").text(gnrl[i].Description);
-$(".bg-modal-2").css("display","block");
-$("body").css("overflowY","hidden");
-}
-}
-}
 $(".close").click(()=>{
     $("body").css("overflowY","visible");
     $(".bg-modal-2").css("display","none");
 })
-
-//Load data client
-// function LoadDataclient(){
-//     request.open("GET", url2);
-//     request.onload = function() {
-//         if (request.status == 200) {
-//             client = JSON.parse(request.responseText);
-//               validatename(client);
-//         }
-//     };
-// }
-
-// function validatename(data){
-   
-//     // if(bol){
-//     //     return true;
-//     // }else{
-//     //     return false;
-//     // }
-//     console.log(data);
-   
-// }
-
 //validation forme 
 $("#btn").click((e)=>{
     e.preventDefault();

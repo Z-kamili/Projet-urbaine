@@ -50,12 +50,18 @@
     <div class="Reclamation Question">
         <h2>Réclamation</h2>
         <div class="border2"></div>
-
-        <div class="select-service">
+<form method="POST" action="Reclamation.hbs">
+    <div class="select-service">
             <label for="formGroupExampleInput">Service</label>
-            <select id="select">
+            <select id="select" name="service">
+                {{#each data}}
+                <option>{{this.Nom_service}}</option>
+                {{/each}}
             </select>
-            <button>Rechercher</button>
+            <button type="submit">Rechercher</button>
+</form>
+        
+            
         </div>
         <div class="container reclamation-info">
             <table class="table table-striped table-bordered">
@@ -67,7 +73,6 @@
                         <th>Service</th>
                         <th>Client</th>
                         <th>Description</th>
-                        <th>Affichage</th>
                         
                     
                     </tr>
@@ -77,41 +82,16 @@
                 </thead>
                 
                 <tbody>
+                    {{#each data2}}
                     <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>{{this.datequestion}}</td>
+<td>{{this.Nom_service}}</td>
+<td>{{this.CIN}}</td>
+<td>{{this.description}}</td>
+
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td></td>
-                                                                                                <td></td>
-                                                                                                <td></td>
-                                                                                                <td></td>
-                                                                                                <td></td>
-                                                                                                                    </tr>
+                     {{/each}}
+         
                 </tbody>
             </table>
         </div>
@@ -141,6 +121,6 @@
 
     </section>
    {{> footer}}
-    <script src="public/Traitement/file.js"></script>
+    {{!-- <script src="public/Traitement/file.js"></script> --}}
 </body>
 </html>

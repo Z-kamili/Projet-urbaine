@@ -52,6 +52,9 @@
             
                 <label for="formGroupExampleInput">Service</label>
                <select class="form-control" onchange="getSelectValue()" id="select" name="service">
+                {{#each data}}
+                <option>{{this.Nom_service}}</option>
+                {{/each}}
                </select>
              
             <div class="form-group">
