@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="../public/img/Images/logo.png" rel="icon" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link href="../public/css/style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header id="home">
         <nav>
             <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
@@ -19,7 +20,7 @@
                <input type="checkbox" id="check">
                <div class="Menu-link2" >
                 
-                    <a href="home.hbs">Home</a>
+                    <a href="#home">Home</a>
                     <a >Réclamation</a>
                     <a class="contact">Contact</a>
                     <a class="active" href="questionnement.hbs" >Questionnaire</a>
@@ -28,15 +29,15 @@
             <div class="Logo"> <img src="../public/img/question/img.png" class="Logo"></div>
            
                 <ul>
-                    <a href="home.html">Home</a>
-                    <li><a href="home.hbs" >Home</a></li>
+                    <a href="#home">Home</a>
+                    <li><a href="#home" >Home</a></li>
                     <li class="active question"><a >Réclamation</a></li>
                     <li class="contact"><a>Contact</a></li>
                     <li  ><a href="questionnement.hbs">Questionnaire</a></li>
                 </ul>
            
             <div>
-                <img src="../public/img/question/Icon open-account-login.png" class="deconnecter">
+              <a href="home.hbs"><img src="../public/img/question/Icon open-account-login.png" class="deconnecter"></a>  
             </div>
         </nav>
        <div class="Titre">

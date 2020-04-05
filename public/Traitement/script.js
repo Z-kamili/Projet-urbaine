@@ -1,13 +1,13 @@
 let listImages = [{
-        url: "../img/Images/activite1.jpg",
+        url: "http://localhost:8000/public/img/Images/activite1.jpg",
         title: "Journée internationale de la femme 2020"
     },
     {
-        url: "../img/Images/activite2.jpg",
+        url: "http://localhost:8000/public/img/Images/activite2.jpg",
         title: "Annonce Droit d'accès à l'information"
     },
     {
-        url: "../img/Images/activite3.jpg",
+        url: "http://localhost:8000/public/img/Images/activite3.jpg",
         title: "Bilan Août/Décembre 2019"
     }
 ];
@@ -17,6 +17,7 @@ let index = 0;
   
 function switchImage() {
     document.getElementById("image").src = listImages[index].url;
+    console.log( document.getElementById("image").src = listImages[index].url);
     document.getElementById("image-title").innerHTML = listImages[index].title;
 
     for(let i = 0; i < document.querySelectorAll("#buttons div").length; i++){
@@ -24,7 +25,7 @@ function switchImage() {
         document.querySelectorAll("#buttons div")[i].classList.remove("active");
         
     }
-    document.querySelectorAll("#buttons div")[index].classList.add("active");
+    // document.querySelectorAll("#buttons div")[index].classList.add("active");
     
 }
 

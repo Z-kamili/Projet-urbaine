@@ -1,7 +1,7 @@
 //variable
 var select = document.getElementById("select");
-var url = "http://localhost:3000/public/Traitement/JSON/service.json";
-var url2 = "http://localhost:3000/public/Traitement/JSON/Client.json";
+var url = "http://localhost:8000/public/Traitement/JSON/service.json";
+var url2 = "http://localhost:8000/public/Traitement/JSON/Client.json";
 var request = new XMLHttpRequest();
 var data_service = "";
 var E_rror = document.createElement("div");
@@ -16,8 +16,6 @@ $('.question').removeClass("active");
        
         
     },'slow');
-
-
 });
 $(".question").click(()=>{
 $('.contact').removeClass("active");
@@ -29,15 +27,14 @@ $('.question').addClass("active");
 });
 
 //Load data to object javascript using AJAX
-window.onload = function() {
+window.onload = function(){
   this.LoadDataService();
 }
-
 //function
 function LoadDataService(){
     request.open("GET", url);
-    request.onload = function() {
-        if (request.status == 200) {
+    request.onload = function(){
+        if (request.status == 200){
             data_service = JSON.parse(request.responseText);
             RemplirSelect(data_service);
 
@@ -54,6 +51,19 @@ function RemplirSelect(data){
         var option = document.createElement("option");
         option.innerText = data[i].Nom_service;
         select.appendChild(option);
+    }
+}
+function getSelectValue(){
+    console.log(gnrl);
+    selectedValue = document.getElementById("select").value;
+    for(var i = 0;i<gnrl.length;i++){
+    if(gnrl[i].Nom_service == selectedValue){
+    $("#Nom").text(gnrl[i].Nom_service);
+    console.log(gnrl[i].Description);
+    $("#Descriptions").text(gnrl[i].Description);
+    $(".bg-modal-2").css("display","block");
+    $("body").css("overflowY","hidden");
+    }
     }
 }
 

@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#image{
+  height: 455px;
+}
+
+/*header*/
+/*Menu*/
+header #check {
+  display: none;
+}
+
+header .checkbtn {
+  position: relative;
+  left: -210px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  top: 120px;
+}
+
+header .Menu-link2 {
+  top: 97px;
+  position: absolute;
+  left: -70px;
+  z-index: 1;
+  display: none;
+}
+
+header nav {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000000;
+  color: #FFF;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+}
+
+header nav .Logo {
+  height: 60px;
+  margin-left: 20px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  list-style-type: none;
+  padding: 40px;
+  font-family: Segoe UI;
+  font-weight: bold;
+  font-style: italic;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+header nav ul li a:hover {
+  text-decoration: none;
+  color: #D5AC63;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  color: #D5AC63;
+  cursor: pointer;
+}
+
+header nav .deconnecter {
+  margin: 40px;
+}
+
+header .Titre {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../image/1.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(1.jpg);
+  height: 550px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 130px;
+  padding-left: 50px;
+}
+
+header .Titre div h1 {
+  font-family: Agency Fb;
+  font-size: 72px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+header .Titre div h1 span {
+  color: #D5AC63;
+}
+
+header .Titre button {
+  font-family: Segoe UI;
+  background-color: #D5AC63;
+  font-style: italic;
+  border: none;
+  padding: 10px;
+  border-radius: 100px;
+  width: 141px;
+  font-size: 20px;
+  outline: none;
+}
+
+header .Titre button:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: #D5AC63;
+}
+
+/*Contactez*/
+.login h2 {
+  text-align: center;
+  font-family: Segoe UI;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.login .border2 {
+  width: 160px;
+  height: 2px;
+  background-color: #D5AC63;
+  margin: 20px auto;
+}
+
+.login .container .frm {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 456px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 66px;
+}
+
+.login .container .frm .image img {
+  width: 605px;
+  border-top-left-radius: 10px;
+}
+
+.login .container .frm .parag1 {
+  font-weight: bold;
+  padding-top: 12%;
+  margin-top: 0%;
+  margin-left: 190px;
+  line-height: 1.8;
+  font-size: 15px;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+.login .container .frm .parag {
+  text-align: center;
+  color: black;
+  margin-top: 4%;
+  position: absolute;
+  margin-left: 209px;
+}
+
+.login .container .frm .btn {
+  position: absolute;
+  border: none;
+  height: 8%;
+  width: 12%;
+  border-radius: 42px;
+  font-style: italic;
+  background: #2893DA;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 23%;
+  margin-left: 209px;
+  cursor: pointer;
+}
+
+.login .container .frm .input1 .title1 {
+  font-family: Segoe UI;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 23px;
+  margin-top: 23px;
+  margin-left: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.login .container .frm .input1 #name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 67%;
+  font-style: italic;
+  height: 40px;
+  text-align: center;
+  margin-left: 110px;
+  margin-top: 37px;
+}
+
+.login .container .frm .input1 #email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 67%;
+  font-style: italic;
+  height: 40px;
+  text-align: center;
+  margin-left: 110px;
+  margin-top: 37px;
+}
+
+.login .container .frm .input1 #password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 67%;
+  font-style: italic;
+  height: 40px;
+  text-align: center;
+  margin-left: 110px;
+  margin-top: 37px;
+}
+
+.login .container .frm .input1 .fa-user {
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 125px;
+  color: #828999;
+  display: block;
+}
+
+.login .container .frm .input1 .fa-envelope {
+  position: absolute;
+  margin-top: 46px;
+  margin-left: 125px;
+  color: #828999;
+  display: block;
+}
+
+.login .container .frm .input1 .fa-lock {
+  position: absolute;
+  margin-top: 46px;
+  margin-left: 125px;
+  color: #828999;
+  display: block;
+}
+
+.login .container .frm .input1 .fa-user-plus {
+  position: absolute;
+  margin-top: 46px;
+  margin-left: 125px;
+  color: #828999;
+  display: block;
+}
+
+.login .container .frm .input1 .title2 {
+  font-family: Segoe UI;
+  font-size: 12px;
+  font-style: italic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  margin-top: 30px;
+  margin-left: 330px;
+}
+
+.login .container .frm .input1 #button {
+  width: 29%;
+  height: 36px;
+  border-radius: 38px;
+  background-color: #D5AC63;
+  color: black;
+  font-style: italic;
+  font-family: Segoe UI;
+  margin-top: 10;
+  margin-left: 194px;
+  text-align: center;
+}
+
+.login .container .frm .input1 #button:hover {
+  background-color: black;
+  color: #D5AC63;
+}
+
+.login .container .frm .input1 #p1, .login .container .frm .input1 #p2, .login .container .frm .input1 #p3 {
+  color: #FF0000;
+}
+
+.login .container .frm .input1 .title3 {
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: italic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  margin-top: 54px;
+  margin-left: 167px;
+}
+
+.Contact {
+  margin-top: 100px;
+}
+
+.Contact h2 {
+  text-align: center;
+  font-family: Segoe UI;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.Contact .border2 {
+  width: 160px;
+  height: 2px;
+  background-color: #D5AC63;
+  margin: 20px auto;
+}
+
+.Contact .map {
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+
+/*footer*/
+footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  margin-top: 200px;
+}
+
+footer .ftr ul {
+  color: #D5AC63;
+  font-family: Segoe UI;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .ftr ul li {
+  list-style-type: none;
+  padding: 7px;
+  text-align: center;
+}
+
+footer .ftr ul i {
+  color: #909090;
+  font-size: 2em;
+}
+
+/*media query*/
+@media screen and (max-width: 830px) {
+  header .checkbtn {
+    position: relative;
+    left: 10px;
+    font-size: 30px;
+    color: #D5AC63;
+    cursor: pointer;
+    display: block;
+    top: 0px;
+    z-index: 2;
+  }
+  header #check:checked ~ .Menu-link2 {
+    display: block;
+  }
+  header .Menu-link2 {
+    top: 80px;
+    position: absolute;
+    left: -70px;
+    z-index: 1;
+  }
+  header .Menu-link2 a {
+    display: block;
+    background-color: black;
+    width: 300%;
+    height: 60px;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+  }
+  header .Menu-link2 a:hover {
+    color: #D5AC63;
+    cursor: pointer;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #000000;
+    color: #FFF;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+  }
+  header nav .Logo {
+    height: 60px;
+    margin-left: 20px;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav ul li {
+    list-style-type: none;
+    padding: 40px;
+    font-family: Segoe UI;
+    font-weight: bold;
+    font-style: italic;
+  }
+  header nav ul li:hover {
+    color: #D5AC63;
+    cursor: pointer;
+  }
+  .Titre {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../image/1.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../image/1.png);
+    height: 550px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 173px !important;
+    padding-left: 50px;
+    margin: auto;
+  }
+  .Titre div h1 {
+    font-family: Agency Fb;
+    font-size: 50px !important;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+  .Titre div h1 span {
+    color: #D5AC63;
+  }
+  .Titre button {
+    font-family: Segoe UI;
+    background-color: #D5AC63;
+    font-style: italic;
+    border: none;
+    padding: 10px;
+    border-radius: 100px;
+    width: 141px;
+    font-size: 20px;
+    outline: none;
+  }
+  .Titre button:hover {
+    cursor: pointer;
+  }
+  .login {
+    margin-top: 35px;
+  }
+  .login h2 {
+    font-size: 26px;
+  }
+  .login .container .frm .image img {
+    display: none;
+  }
+  .login .container .frm .input1 .title1 {
+    font-size: 19px;
+    margin-left: 182px;
+  }
+  .login .container .frm .input1 #name {
+    margin-left: 78px;
+  }
+  .login .container .frm .input1 #email {
+    margin-left: 78px;
+  }
+  .login .container .frm .input1 #password {
+    margin-left: 78px;
+  }
+  .login .container .frm .input1 .title2 {
+    font-size: 12px;
+  }
+  .login .container .frm .input1 #button {
+    margin-left: 160px;
+  }
+  .login .container .frm .input1 .title3 {
+    margin-left: 29%;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

@@ -1,9 +1,11 @@
 [
     {
-        "CIN": 1,
-        "nom" : "Kamili",
-        "Prenom" : "Zakaria",
-        "Date_Naissence ": "10/04/1997",
-        "email" : "Zakariakamili97@gmail.com"
-    }
-]
+    "CIN": "JKQSHD876",
+    "nom": "Saloua",
+    "prenom": "elabyaf",
+    "dateN": "some date",
+    "email": "salouael@gmail.com",
+    "Date_Naissence ": "11/11/1998",
+    "numeroTel": "065865",
+    "motPass": "saloua12"
+}]

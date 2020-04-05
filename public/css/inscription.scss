@@ -1,0 +1,640 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+}
+/*header*/
+
+/*Menu*/
+header{
+    #check{
+        display: none;
+    }
+    .checkbtn{
+    position: relative;
+    left: -210px;
+    font-size: 30px;
+    color:white;
+    cursor: pointer;
+    display: none;
+    top:120px;
+    }
+    .Menu-link2{
+        top: 97px;
+        position: absolute;
+        left:-70px;
+        z-index: 1;
+        display: none;}
+    nav{
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000000;
+        color: #FFF;
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        .Logo{
+            height: 60px;
+            margin-left: 20px;
+        }
+        ul{
+            display: flex;
+            li{
+                a{
+                    text-decoration: none;
+                    color: #FFF;
+                    &:hover{
+                        text-decoration: none;
+                        color: #D5AC63;
+                        cursor: pointer;
+                    }
+                }
+                list-style-type: none;
+                padding: 40px;
+                font-family: Segoe UI;
+                font-weight: bold;
+                font-style: italic;
+                
+                &:hover{
+                    color: #D5AC63;
+                    cursor: pointer;
+                }
+                
+            }
+        }
+        .deconnecter{
+            margin: 40px;
+        }
+    }
+    .Titre{
+        background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../image/1.png);
+        height: 550px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 130px;
+        padding-left: 50px;
+        div{
+            h1{
+                font-family: Agency Fb;
+                font-size: 72px;
+                font-weight: bold;
+                color: #FFFFFF;
+                span{
+                    color: #D5AC63;
+                }
+            }
+        }
+        button{
+            font-family: Segoe UI;
+              background-color:#D5AC63;
+                font-style: italic;
+                border: none;
+                padding: 10px;
+                border-radius: 100px;
+                width: 141px;
+                font-size: 20px;
+                outline: none;
+                &:hover{
+                    cursor: pointer;
+                }
+        }
+    }
+}
+.active{
+    color: #D5AC63;
+}
+
+
+/*inscription*/
+.login{
+    h2{
+        text-align: center;
+        font-family: Segoe UI;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .border2{
+    width: 160px;
+    height: 2px;
+    background-color: #D5AC63;
+    margin: 20px auto;
+    }
+ .container{
+        
+        .frm{
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 456px;
+            display: flex;
+            width: 100%;
+            margin-top: 66px;
+           
+            & .image img {
+                width: 529px;
+                border-top-left-radius: 10px;
+                margin-top: 0px;
+           
+                }
+            & .parag1{
+                font-weight: bold;
+                padding-top: 12%;
+                margin-top: 0%;
+                margin-left: 119px;
+                line-height: 1.8;
+                font-size: 15px;
+                position: absolute;
+                text-align: center;
+                color: white;
+            }  
+            & .parag{
+                text-align: center;
+                color: black;
+                margin-top: 4%;
+                position: absolute;
+                margin-left: 100px;
+            }  
+            & .btn{
+                position: absolute;
+                border: none;
+                height: 8%;
+                width: 12%;
+                border-radius: 42px;
+                font-style: italic;
+                background: #2893DA;
+                font-weight: bold;
+                color: #ffffff;
+                margin-top: 21%;
+                margin-left: 163px;
+                cursor: pointer
+            }
+
+            & .input1{
+               
+
+               & .title1{
+                 font-family: Segoe UI;
+                 font-weight: bold;
+                 font-style: italic;
+                 font-size: 23px;
+                 margin-top: 23px;
+                 margin-left: 226px;
+                 display: flex;
+                }  
+
+               & #Name2{
+              
+                width: 40%;
+                font-style: italic;
+                height: 40px;
+                text-align: center;
+                margin-left: 26px;
+                margin-top: 37px;
+                // border-radius: 11px;
+               }
+               & #Name3{
+              
+                width: 40%;
+                font-style: italic;
+                height: 40px;
+                text-align: center;
+                margin-left: 26px;
+                margin-top: 37px;
+                // border-radius: 11px;
+               }
+               & #date{
+           
+                width: 40%;
+                font-style: italic;
+                height: 40px;
+                text-align: center;
+                margin-left: 26px;
+                margin-top: 37px;
+                // border-radius: 11px;
+               }
+               & #cin{
+            
+                width: 40%;
+                font-style: italic;
+                height: 40px;
+                text-align: center;
+                margin-left: 26px;
+                margin-top: 37px;
+                // border-radius: 11px;
+               }
+
+               & #email-id{
+             
+                width: 40%;
+                font-style: italic;
+                height: 40px;
+                text-align: center;
+                margin-left: 26px;
+                margin-top: 37px;
+                // border-radius: 11px;  
+               }
+               & #password-id{
+            
+                width: 40%;
+                font-style: italic;
+                height: 40px;
+                text-align: center;
+                margin-left: 26px;
+                margin-top: 37px;
+                // border-radius: 11px;
+              
+               }
+               & #tele{
+                width: 40%;
+                font-style: italic;
+                height: 40px;
+                text-align: center;
+                margin-left: 26px;
+                margin-top: 37px;
+                // border-radius: 11px;  
+               }
+               & #confirmation{
+            
+                width: 40%;
+                font-style: italic;
+                height: 40px;
+                text-align: center;
+                margin-left: 26px;
+                margin-top: 37px;
+                // border-radius: 11px;
+               
+                }
+
+               .fa-user   {
+                position: absolute;
+                margin-top: 49px;
+                margin-left: 37px;
+                color: #828999;
+                display: block;
+           
+               }
+               .fa-envelope{
+                position: absolute;
+                margin-top: 48px;
+                margin-left: 40px;
+                color: #828999;
+                display: block;
+
+               }
+               
+               .fa-phone{
+                position: absolute;
+                margin-top: 48px;
+                margin-left: 40px;
+                color: #828999;
+                display: block; 
+               }
+               .fa-lock{
+                position: absolute;
+                margin-top: -30px;
+                margin-left: 307px;
+                color: #828999;
+                display: block;
+
+            
+               }
+               .fa-user-plus{
+                position: absolute;
+                margin-top: -29px;
+                margin-left: 304px;
+                color: #828999;
+                display: block;
+
+               
+               }
+               .fa-calendar{
+                position: absolute;
+                margin-top: 48px;
+                margin-left: 40px;
+                color: #828999;
+                display: block;
+
+               
+               }
+               .fa-id-card{
+                position: absolute;
+                margin-top: -28px;
+                margin-left: 304px;
+                color: #828999;
+                display: block;
+               }
+               
+               .fa-key{
+                position: absolute;
+                position: absolute;
+                margin-top: -28px;
+                margin-left: 290px;
+                color: #828999;
+                display: block;
+               }
+
+  
+               & .title2 {
+                font-family: Segoe UI;
+                font-size: 12px;
+                font-style: italic;
+                display: flex; 
+                color: black;
+                margin-top: 30px;
+                margin-left: 330px;
+
+               }
+               & #Button{
+                width: 29%;
+                height: 36px;
+                border-radius: 38px;
+                background-color: #D5AC63;
+                color: black;
+                font-style: italic;
+                font-family: Segoe UI;
+                margin-top: 30px;
+                margin-left: 194px;
+                text-align: center;
+               
+              
+              &:hover{
+                  background-color: black;
+                  color: #D5AC63 ;
+              
+              }
+            
+            }
+            & .title3{
+                font-family: Segoe UI;
+                font-size: 14px;
+                font-style: italic;
+                display: flex;
+                color: black;
+                margin-top: 54px;
+                margin-left: 167px;
+                
+            
+            }
+            
+          
+           }
+            }
+        
+    }
+}
+
+
+// map
+.Contact{
+    margin-top: 100px;
+    h2{
+        text-align: center;
+        font-family: Segoe UI;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .border2{
+    width: 160px;
+    height: 2px;
+    background-color: #D5AC63;
+    margin: 20px auto;
+    }
+    .map{
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+}
+
+
+
+/*footer*/
+footer{
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-top: 200px;
+    .ftr{
+       
+        ul{
+           color:#D5AC63;
+           font-family: Segoe UI;
+            align-items: center;
+            justify-content: center;
+            li{
+                list-style-type: none;
+                padding: 7px;
+                text-align: center;
+            }
+            i{
+                color: #909090;
+                font-size: 2em;
+            }
+        }
+    }
+}
+/*media query*/
+@media screen and (max-width:830px){   
+    header{
+        .checkbtn{
+            position: relative;
+            left: 10px;
+            font-size: 30px;
+            color:#D5AC63;
+            cursor: pointer;
+            display: block;
+            top: 0px;
+            z-index: 2;
+        }
+        #check:checked ~ .Menu-link2{
+            display: block;
+        }
+        .Menu-link2{
+            top: 80px;
+            position: absolute;
+            left:-70px;
+            z-index: 1;
+            a{
+                display: block;
+                background-color: black;
+                width:100% + 200%;
+                height: 60px;
+                text-align: center;
+                color: #FFF;
+                text-decoration: none;
+                &:hover{
+                    color: #D5AC63;
+                    cursor: pointer;
+                }
+                
+        
+            }
+        }
+        nav{
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+            color: #FFF;
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            .Logo{
+                height: 60px;
+                margin-left: 20px;
+            }
+            ul{
+                display: none;
+                li{
+                    list-style-type: none;
+                    padding: 40px;
+                    font-family: Segoe UI;
+                    font-weight: bold;
+                    font-style: italic;
+                    
+                    &:hover{
+                        color: #D5AC63;
+                        cursor: pointer;
+                    }
+                    
+                }
+            }
+
+
+
+}
+    }
+    .Titre{
+        background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../image/1.png);
+        height: 550px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 173px !important;
+        padding-left: 50px;
+        // text-align: center;
+        margin: auto;
+        div{
+            h1{
+                font-family: Agency Fb;
+                font-size: 50px !important;
+                font-weight: bold;
+                color: #FFFFFF;
+               
+                span{
+                    color: #D5AC63;
+                }
+            }
+        }
+        button{
+            font-family: Segoe UI;
+              background-color:#D5AC63;
+                font-style: italic;
+                border: none;
+                padding: 10px;
+                border-radius: 100px;
+                width: 141px;
+                font-size: 20px;
+                outline: none;
+                &:hover{
+                    cursor: pointer;
+                }
+        }
+    }
+    
+ 
+  .login{
+    margin-top: 35px;
+  }
+  .login h2 {
+    font-size: 26px;
+  }
+  .login .container .frm .image img {
+      display: none;
+  }
+  .login .container .frm .input1 .title1{
+    font-size: 19px;
+    margin-left: 182px;
+  }
+  .login .container .frm .input1 #Name2{
+    margin-left: 100px;
+    width: 252px;
+  }
+  .login .container .frm .input1 #Name3{
+    margin-left: 100px;
+    width: 252px;
+  }
+  .login .container .frm .input1 #date{
+    margin-left: 100px;
+    width: 252px;
+  }
+  .login .container .frm .input1 #cin{
+    margin-left: 100px;
+    width: 252px;
+  }
+  .login .container .frm .input1 #email-id{
+    margin-left: 100px;
+    width: 252px;
+  }
+  .login .container .frm .input1 #password-id{
+    margin-left: 100px;
+    width: 252px;
+  }
+  .login .container .frm .input1 #confirmation{
+    margin-left: 100px;
+    width: 252px;
+  }
+  .login .container .frm .input1 .title2{
+    font-size: 12px;
+  }
+  .login .container .frm .input1 #button{
+      margin-left: 160px;
+  }
+  .login .container .frm .input1 .title3{
+      margin-left: 29%;
+  }
+  .login .container .frm .input1 .fa-user-plus {
+    margin-left: 112px;
+    margin-top: 48px;
+}
+
+.login .container .frm .input1 .fa-user {
+    margin-left: 113px;
+}
+.login .container .frm .input1 .fa-calendar {
+    margin-left: 113px;
+}
+.login .container .frm .input1 .fa-id-card{
+    margin-left: 112px;
+    margin-top: 48px;
+}
+.login .container .frm .input1 .fa-envelope {
+    margin-left: 113px;
+}
+.login .container .frm .input1 .fa-lock{
+    margin-left: 112px;
+    margin-top: 48px; 
+}
+.login .container .frm .input1 .fa-key{
+    margin-left: 113px;
+}
+.login .container .frm .input1 #Button{
+    margin-left: 157px;
+    height: 28px;
+}
+.login .container .frm {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 693px;
+    display: flex;
+    width: 100%;
+    margin-top: 66px;
+}
+
+}

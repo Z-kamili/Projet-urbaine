@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="../public/css/contact.css" rel="stylesheet">
+    <link href="../public/img/Images/logo.png" rel="icon" type="image/png">
+        <script src="../public/Traitement/jquery_min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script src="../public/Traitement/contact.js"></script>
+    
+    <title>Document</title>
+    <style type="text/css">
+    .valid {
+        border: 1px solid green;
+    }
+    .error {
+        color: red;
+    font-style: italic;
+    font-size: 13px;
+    margin-left: 201px;
+}
+    
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header>
+       
+        <nav>
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+               </label>
+               <input type="checkbox" id="check">
+               <div class="Menu-link2" >
+                
+                    <a href="home.hbs">Home</a>
+                    <a >Réclamation</a>
+                    <a class="active" href="inscription.html">Contact</a>
+                    <a>Questionnaire</a>
+                
+            </div>
+            <div class="Logo"> <img src="../public/img/Images/img.png" class="Logo"></div>
+            <ul>
+                <li><a href="home.hbs">Home</a></li>
+                <li ><a>Réclamation</a></li>
+                <li class="active"><a href="inscription.html">Contact</a></li>
+                <li  ><a>Questionnaire</a></li>
+            </ul>
+            <div>
+                <button type="button" class="btn"   onclick="inscriptionToConnection()" > <a style="color: white;text-decoration: none; background-color: transparent;" href="inscription.html"></a></button>
+            </div>
+        </nav>
+       <div class="Titre">
+
+        <div><h1>Bienvenue à l'Agence</h1></div>
+        <div><h1>Urbaine de <span>Safi</span></h1></div>
+        <button>Plus d'info</button>
+       </div>
+    </header>
+
+    <!-- fin de header -->
+
+
+    <!-- Contact -->
+    <section class="login">
+        <h2>Contactez Nous</h2>
+        <div class="border2"></div>
+       <div class="container ">
+        <div class="frm">
+                <div class="image"> 
+                        <h3 class="parag">Nouveau ici ?</h3> 
+                        <p class="parag1">entrez vos informations <br> personnelles et commencez <br>la connexion avec nous</p>
+    
+                        <button type="button" class="btn"   onclick="inscriptionToConnection()" > <a style="color: white;text-decoration: none; background-color: transparent;" href="inscription.html"> Inscription</a></button>
+                    <img id="image" src="../public/img/Images/2.jpg">
+                </div>
+
+                <div class="input1">
+               <h2 class="title1">Bienvenue</h2>
+
+<!-- form -->
+               <form method="POST" id="registraton_form" action="questionnement.hbs">
+
+               <i class="fa fa-user"></i>
+            <input type="text" placeholder="Nom complet " id="name"  name="name" />
+    
+
+            <i class="fa fa-envelope"></i>
+            <input type="text" placeholder="Email"  id="email"  name="email" />
+
+            
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Mot de passe " id="password" name="password"  />
+
+
+            <h4 class="title2"><a href="#" style="color:black;">mot de passe oublié?</a></h4>
+            <button id="button" type="submit">Envoyer</button>
+            <h4 class="title3"><a href="inscription.html" style="color:black;">Pas encore inscrit ? s'inscrire</a> </h4>
+        </form>
+                </div>
+       
+
+                
+        </div>
+
+         
+       </div>
+               
+         
+           
+    </section>
+
+    <!-- map -->
+    <section class="Contact">
+
+        <h2>Contact</h2>
+        <div class="border2"></div>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.658789965705!2d-9.234824884855412!3d32.29415048112049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac20d5c3a99d81%3A0x45f2898762ef52ea!2sAgence%20Urbaine%20De%20Safi!5e0!3m2!1sfr!2sma!4v1584297741323!5m2!1sfr!2sma" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="map"></iframe>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- footer -->
+    <footer >
+        <div class="container ftr">
+         
+            <div class="row text-center">
+                <ul class="d-flex col-md-12  ">
+<li ><a>Condition Générales d'Utitlisation </a></li>
+<li><a>Appels d'offres </a></li>
+<li><a>Recrutement </a></li>
+<li><a>Bilans & Statistiques </a></li>
+                </ul>
+                <ul class="d-flex col-md-12  ">
+                    <li><i class="fab fa-facebook-f"></i>
+                    </li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fas fa-rss"></i></li>
+                </ul>
+                <div class="col-md-12" >© 2016 - Agence Urbaine SAFI-YOUSSOUFIA - Tous droits réservés | Conception et réalisation : Social Impulse</div>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+</html>

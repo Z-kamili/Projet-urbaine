@@ -5,7 +5,6 @@ const hbs = require('hbs');
 const app = express();
 const partialsPath = path.join(__dirname, './partials');
 var bodyParser = require('body-parser'),
-
 client = "",
 path_jsonfile = 'public/Traitement/JSON/Question.json',
 LoadData = require('./Modale/Readandwrite');
@@ -19,31 +18,39 @@ app.set('view engine', 'hbs');
 // app.engine('html', require('hbs').__express);
 // app.set('view engine', 'hbs');
 // Pointing express to my custom directory
-app.set('views', viewPath)
-hbs.registerPartials(partialsPath)
+app.set('views', viewPath);
+hbs.registerPartials(partialsPath);
 // registerPartials take the path to the direcotory where my partials leaves
 app.use("/public/css",express.static("./public/css"))
 app.use("/public/Traitement",express.static("./public/Traitement"))
 app.use("/public/img",express.static("./public/img"))
 // Lancement des pages
 app.get("/questionnement.hbs", (req, res) => {
-  res.render('questionnement');
+  res.render('questionnement',{data});
 });
-app.get("/Reclamation.hbs", (req, res) => {
+app.get("/Reclamation.hbs", (req, res)=> {
     res.render('Reclamation',{data});
-  });
-app.get("/home.hbs", (req, res) => {
+});
+app.get("/home.hbs",(req,res)=>{
     res.render('home');
-  });
+});
+app.get("/inscription.html",function(req,res){
+    res.sendFile(__dirname+"/views/inscription.html");
+});
+app.get("/contact.html",function(req,res){
+    res.sendFile(__dirname+"/views/contact.html");
+});
 // Port
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8000;
 app.listen(port,() => console.log(`Listening on port ${port}...`));
 /*server local*/
 // /*Use Post data*/
 app.post("/questionnement.hbs",urlencodedParser,function(req,res){  
-    SaveData(req.body.CIN,req.body.Date,req.body.Description,req.body.service);
-   
-    res.render('questionnement');
+    var date_question = new Date();
+    var date = date_question.getDate() + "/" + (date_question.getMonth() + 1) + "/" + date_question.getFullYear(); 
+    
+    SaveData(req.body.CIN,date,req.body.Description,req.body.service);
+    res.render('questionnement',{data});
 });
 //button recherche
 app.post("/Reclamation.hbs",urlencodedParser,function(req,res){  
@@ -52,7 +59,7 @@ var data2 = [{ID:null,CIN:null,datequestion:null,description:null,Nom_service:nu
 var j = 0;
 for(var i = 0;i<Question.length;i++){
   if(req.body.service == Question[i].Nom_service){
-data2[j] = Question[i];
+    data2[j] = Question[i];
 j++;
 }
 }
