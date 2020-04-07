@@ -5,14 +5,16 @@ const hbs = require('hbs');
 const app = express();
 const partialsPath = path.join(__dirname, './partials');
 var bodyParser = require('body-parser'),
-client = "",
+client = "";
 path_jsonfile = 'public/Traitement/JSON/Question.json',
 LoadData = require('./Modale/Readandwrite');
 var data = LoadData.LoadJson('public/Traitement/JSON/service.json');
+var wd = LoadData.LoadJson('public/Traitement/JSON/service.json');
 urlencodedParser = bodyParser.urlencoded({ extended: false });
 // *Define paths for express config
 const viewPath = path.join(__dirname, './views');
 // *setup handlebars engine and views location
+app.set('view engine','ejs');
 app.set('view engine', 'hbs');
 // app.set('view engine', 'html');
 // app.engine('html', require('hbs').__express);
@@ -24,7 +26,7 @@ hbs.registerPartials(partialsPath);
 app.use("/public/css",express.static("./public/css"))
 app.use("/public/Traitement",express.static("./public/Traitement"))
 app.use("/public/img",express.static("./public/img"))
-// Lancement des pages
+// Lancement des pages.
 app.get("/questionnement.hbs", (req, res) => {
   res.render('questionnement',{data});
 });
@@ -89,5 +91,40 @@ function SaveData(cin,date_question,description,id_service){
     LoadData.SaveJson(path_jsonfile,question);
     
 }
+/*larouze*/
+app.get('/entreprise',(req,resp)=>{
+    resp.render('Page1.ejs',{entreprise:wd});
+});
+app.post('/dep',function(req,resp){
+    console.log(req.body);
+});
+// Ajouter Département  //
+app.post('/d',(req,resp)=>{
+    console.log(req.body.entreprise);
+for(var i in list){
+    if(list[i].nom===req.body.entreprise){
+    list[i].Département.push({"id":list.length +1,"chef_département":req.body.chef_département,"description":req.body.description});
+}
+}
+fs.writeFile('./data/Entreprise.json',JSON.stringify(list),(err)=>{
+    console.log(err);
+});
+resp.render('pages/Page1',{entreprise:list});
+});
+
+// Ajouter Entreprise  //
+app.post('/entre',urlencodedParser,(req,resp)=>{
+    var services = LoadData.LoadJson('./public/Traitement/JSON/service.json');
+    let service = {
+        ID: services[services.length - 1].ID + 1,
+        Nom_service: req.body.Nom_service,
+        Description: req.body.description,
+    }
+    services.push(service);
+    console.log(services);
+    LoadData.SaveJson('./public/Traitement/JSON/service.json',JSON.stringify(services));
+    resp.render('Page1.ejs',{entreprise:wd});
+});
+
 
 
